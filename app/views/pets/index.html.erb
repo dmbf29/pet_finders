@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-space-between">
+    <h1>Found Pets</h1>
+    <%= link_to new_pet_path do %>
+      <i class="fas fa-paw"></i>
+    <% end %>
+  </div>
+  <div class="cards">
+    <% @pets.each do |pet| %>
+      <div class="card my-2 p-3">
+        <p><%= link_to pet.name, pet_path(pet) %></p>
+        <p><%= pet.species %></p>
+        <p><%= pet.address %></p>
+        <p>Found <%= pet.found_days_ago %> days ago</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+

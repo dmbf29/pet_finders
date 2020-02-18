@@ -1,0 +1,17 @@
+<div class="container">
+  <h1><%= @pet.name %></h1>
+  <p><%= @pet.species %></p>
+  <p><%= @pet.address %></p>
+  <p>Found <%= @pet.found_days_ago %> days ago</p>
+  <%= link_to 'Pets', root_path, class: 'btn btn-light' %>
+  <p>
+    <%= link_to edit_pet_path(@pet) do %>
+      <i class="fas fa-bone"></i>
+    <% end %>
+  </p>
+  <p>
+    <%= link_to pet_path(@pet), method: :delete, data: { confirm: "Send #{@pet.name} to farm?" } do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+  </p>
+</div>

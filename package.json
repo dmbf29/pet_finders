@@ -1,5 +1,7 @@
 {
   "name": "pet_finders",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
 }
